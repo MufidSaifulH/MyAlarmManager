@@ -27,7 +27,7 @@ class AlarmReceiver : BroadcastReceiver() {
         intent.putExtra(EXTRA_MESSAGE, message)
         intent.putExtra(EXTRA_TYPE, type)
         Log.e("ONE TIME", "$date $time")
-        val dateArray = date.split(".").toTypedArray()
+        val dateArray = date.split("-").toTypedArray()
         val timeArray = time.split(":").toTypedArray()
         val calender = Calendar.getInstance()
         calender.set(Calendar.YEAR, Integer.parseInt(dateArray[0]))
